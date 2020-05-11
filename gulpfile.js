@@ -11,16 +11,15 @@ gulp.task('sass', function() {
     .pipe(browserSync.stream());
 });
 
-gulp.task('browserSync', function() {
-  browserSync.init({
-    server: {
-      baseDir: 'src'
-    },
-  })
-});
-
 
 gulp.task('watch', function(){
   gulp.watch('src/scss/**/*.scss', gulp.series('sass'));
   // Other watchers
 })
+
+gulp.task('default', function() {
+    browserSync.init({
+        proxy: "http://localhost/form/src"
+    });
+    gulp.watch("./src/*.php").on("change", browserSync.reload);
+});
