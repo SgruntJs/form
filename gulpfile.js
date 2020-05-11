@@ -6,9 +6,7 @@ gulp.task('sass', function() {
   return gulp.src('src/scss/**/*.scss')
     .pipe(sass())
     .pipe(gulp.dest('dist/css'))
-    .pipe(browserSync.reload({
-      stream: true
-    }))
+    .pipe(browserSync.stream());
 });
 
 gulp.task('browserSync', function() {
@@ -19,7 +17,7 @@ gulp.task('browserSync', function() {
   })
 });
 
-gulp.task('watch', ['browserSync'], function(){
+gulp.task('watch', function(){
   gulp.watch('src/scss/**/*.scss', gulp.series('sass'));
   // Other watchers
 })
