@@ -1,0 +1,27 @@
+{
+  "name": "form",
+  "version": "1.0.0",
+  "description": "createajax form",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^4.0.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SgruntJs/form.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SgruntJs/form/issues"
+  },
+  "homepage": "https://github.com/SgruntJs/form#readme"
+}
