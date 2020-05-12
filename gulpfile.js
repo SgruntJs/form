@@ -10,7 +10,7 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('dist/css'))
     .pipe(browserSync.stream());
 });
-// add sublime text git
+
 
 gulp.task('watch', function(){
   gulp.watch('src/scss/**/*.scss', gulp.series('sass'));
