@@ -22,7 +22,7 @@
                 <form action="javascript:void(0)" method="post" id="ajax-form">
  
                     <div class="form-group">
-                        <label>Name</label>
+                        <label>Nome</label>
                         <input type="text" name="name" id="name" class="form-control" value="" maxlength="50" >
                     </div>
  
@@ -42,59 +42,6 @@
             </div>
         </div>    
     </div>
-<script type="text/javascript">
- $(document).ready(function($){
- 
-    // hide messages 
-    $("#error").hide();
-    $("#show_message").hide();
- 
-    // on submit...
-    $('#ajax-form').submit(function(e){
- 
-        e.preventDefault();
- 
- 
-        $("#error").hide();
- 
-        //name required
-        var name = $("input#name").val();
-        if(name == ""){
-            $("#error").fadeIn().text("Name required.");
-            $("input#name").focus();
-            return false;
-        }
- 
-        // email required
-        var email = $("input#email").val();
-        if(email == ""){
-            $("#error").fadeIn().text("Email required");
-            $("input#email").focus();
-            return false;
-        }
- 
-        // mobile number required
-        var mobile = $("input#mobile").val();
-        if(mobile == ""){
-            $("#error").fadeIn().text("Mobile number required");
-            $("input#mobile").focus();
-            return false;
-        }
- 
-        // ajax
-        $.ajax({
-            type:"POST",
-            url: "project_folder_name/ajax-form-save.php",
-            data: $(this).serialize(), // get all form field value in serialize form
-            success: function(){
-              $("#show_message").fadeIn();
-              //$("#ajax-form").fadeOut();
-            }
-        });
-    });  
- 
-    return false;
-    });
-</script>	
+<script type="text/javascript" src="/dist/js/scripts.js"></script>	
 </body>
 </html>
