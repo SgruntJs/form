@@ -2,7 +2,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Form</title>
-	<link rel="stylesheet" href="/dist/css/styles.css"/>
+	<link rel="stylesheet" href="../dist/css/styles.css"/>
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
@@ -42,6 +42,6 @@
             </div>
         </div>    
     </div>
-<script type="text/javascript" src="/dist/js/scripts.js"></script>	
+<script type="text/javascript" src="../dist/js/scripts.min.js"></script>	
 </body>
 </html>
