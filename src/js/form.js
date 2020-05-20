@@ -3,7 +3,17 @@
     // hide messages 
     $("#error").hide();
     $("#show_message").hide();
- 
+
+
+        
+    $('#productList').change( function() {
+        if( this.value == '2' ){
+            $('.form-control--pd').show();
+        } else {
+            $('.form-control--pd').hide();
+         }
+        });
+        
     // on submit...
     $('#ajax-form').submit(function(e){
  
@@ -27,6 +37,7 @@
             $("input#email").focus();
             return false;
         }
+        
  
         // mobile number required
         var mobile = $("input#mobile").val();
@@ -44,6 +55,7 @@
             success: function(){
               $("#show_message").fadeIn();
               //$("#ajax-form").fadeOut();
+              $('#ajax-form')[0].reset();
             },
             error: function() {
             	alert('vaffanculo!');
