@@ -4,7 +4,7 @@ const browserSync = require('browser-sync').create();
 const autoprefixer = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
-var uglify = require('gulp-uglify');
+// var uglify = require('gulp-uglify');
 var babel = require('gulp-babel');
 const terser = require('gulp-terser');
 
