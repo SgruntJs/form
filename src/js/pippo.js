@@ -1,5 +1,2 @@
-const pippo = () => {
-	alert('ciao merda!');
-
-
+ const myCar = (car) => `My car is a ${car}`;
 

@@ -1,4 +1,4 @@
-const gulp = require('gulp');
+var gulp = require('gulp');
 const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
 const autoprefixer = require('gulp-autoprefixer');
@@ -6,6 +6,7 @@ var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 var babel = require('gulp-babel');
+const terser = require('gulp-terser');
 
 //script paths
 var jsFiles = 'src/js/**/*.js',
@@ -15,10 +16,10 @@ var jsFiles = 'src/js/**/*.js',
 gulp.task('scripts', function() {
     return gulp.src(jsFiles)
         .pipe(concat('scripts.js'))
-        .pipe(babel({ presets : ['es2015']}))
+        .pipe(babel())
         .pipe(gulp.dest(jsDest))
         .pipe(rename('scripts.min.js'))
-        .pipe(uglify())
+        .pipe(terser())
         .pipe(gulp.dest(jsDest));
 });
 
@@ -42,4 +43,4 @@ gulp.task('watch', function(){
 gulp.task('serve', gulp.parallel(['sass', 'scripts']));
 
 
-gulp.task('default', gulp.series(['serve', 'watch']));
+gulp.task('build', gulp.series(['serve', 'watch']));
